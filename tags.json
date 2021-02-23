@@ -4,14 +4,14 @@
       "name": "release",
       "version": "",
       "commit": "",
-      "upstream": "",
+      "upstream": "Stable",
       "lastUpdated": ""
       },
       {
       "name": "testing",
       "version": "",
       "commit": "",
-      "upstream": "",
+      "upstream": "Unstable",
       "lastUpdated": ""
       },
       {
