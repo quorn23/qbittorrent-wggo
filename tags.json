@@ -1,25 +1,25 @@
 {
   "tags": [
-      {
+    {
       "name": "release",
       "version": "",
       "commit": "",
       "upstream": "Stable",
       "lastUpdated": ""
-      },
-      {
+    },
+    {
       "name": "testing",
-      "version": "",
-      "commit": "",
+      "version": "4.4.0~202102230703-7214-7400284cf",
+      "commit": "bd723b9",
       "upstream": "Unstable",
-      "lastUpdated": ""
-      },
-      {
+      "lastUpdated": "2021-02-23T15:01:55.729Z"
+    },
+    {
       "name": "nightly",
       "version": "",
       "commit": "",
       "upstream": "",
       "lastUpdated": ""
-      }
+    }
   ]
 }
