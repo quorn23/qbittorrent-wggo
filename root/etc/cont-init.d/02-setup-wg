@@ -55,7 +55,7 @@ if [[ ${VPN_ENABLED} == "true" ]]; then
 	#		echo "[INFO] Waiting for \"${VPN_CONF}\" interface to come online."
 	#		sleep 1
 	#	fi
-	done
+	#done
 
 	set -e
 
