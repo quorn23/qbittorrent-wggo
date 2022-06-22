@@ -14,6 +14,9 @@ ARG FULL_VERSION
 RUN curl -fsSL "https://github.com/userdocs/qbittorrent-nox-static/releases/download/${FULL_VERSION}/x86_64-icu-qbittorrent-nox" > "${APP_DIR}/qbittorrent-nox" && \
     chmod 755 "${APP_DIR}/qbittorrent-nox"
 
+# Install wireguard-go as a fallback if wireguard is not supported by the host OS or Linux kernel
+RUN apk add --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing wireguard-go
+
 ARG VUETORRENT_VERSION
 RUN curl -fsSL "https://github.com/wdaan/vuetorrent/releases/download/v${VUETORRENT_VERSION}/vuetorrent.zip" > "/tmp/vuetorrent.zip" && \
     unzip "/tmp/vuetorrent.zip" -d "${APP_DIR}" && \
