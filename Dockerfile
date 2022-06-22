@@ -18,7 +18,7 @@ RUN curl -fsSL "https://github.com/userdocs/qbittorrent-nox-static/releases/down
 RUN apk add --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing wireguard-go
 
 ARG VUETORRENT_VERSION
-RUN curl -fsSL "https://github.com/wdaan/vuetorrent/releases/download/v${VUETORRENT_VERSION}/vuetorrent.zip" > "/tmp/vuetorrent.zip" && \
+RUN curl -fsSL "https://github.com/WDaan/VueTorrent/releases/download/v0.17.1/vuetorrent.zip" > "/tmp/vuetorrent.zip" && \
     unzip "/tmp/vuetorrent.zip" -d "${APP_DIR}" && \
     rm "/tmp/vuetorrent.zip" && \
     chmod -R u=rwX,go=rX "${APP_DIR}/vuetorrent"
