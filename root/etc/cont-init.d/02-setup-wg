@@ -186,6 +186,6 @@ if [[ ${VPN_ENABLED} == "true" ]]; then
 	#		exit 1
 	#	fi
 	#	echo "[INFO] Your old ipv6 is \"${old_ipv6}\", your new ipv6 is \"${new_ipv6}\"."
-	fi
+	#fi
 
 fi
