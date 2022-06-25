@@ -34,15 +34,15 @@ if [[ ${VPN_ENABLED} == "true" ]]; then
 	old_ipv4=$(curl -m 10 -4 -fsSL icanhazip.com 2> /dev/null)
 	old_ipv6=$(curl -m 10 -6 -fsSL icanhazip.com 2> /dev/null)
 
-	if wireguard-go wg-quick down "${CONFIG_DIR}/wireguard/${VPN_CONF}.conf" > /dev/null 2>&1; then
+	if wg-quick down "${CONFIG_DIR}/wireguard/${VPN_CONF}.conf" > /dev/null 2>&1; then
 		echo "[INFO] WireGuard is still running. Stopping WireGuard..."
 		sleep 1
 	else
 		echo "[INFO] WireGuard is down. Continuing..."
 	fi
 	echo "[INFO] Starting WireGuard..."
-	#if wireguard-go wg-quick up "${CONFIG_DIR}/wireguard/${VPN_CONF}.conf"; then
-	if wireguard-go wg0; then
+	if wg-quick up "${CONFIG_DIR}/wireguard/${VPN_CONF}.conf"; then
+	#if wireguard-go wg0; then
 		echo "[INFO] WireGuard is started."
 	else
 		echo "[ERROR] WireGuard failed to start."
