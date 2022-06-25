@@ -41,7 +41,8 @@ if [[ ${VPN_ENABLED} == "true" ]]; then
 		echo "[INFO] WireGuard is down. Continuing..."
 	fi
 	echo "[INFO] Starting WireGuard..."
-	if wireguard-go wg-quick up "${CONFIG_DIR}/wireguard/${VPN_CONF}.conf"; then
+	#if wireguard-go wg-quick up "${CONFIG_DIR}/wireguard/${VPN_CONF}.conf"; then
+	if wireguard-go wg0 "${CONFIG_DIR}/wireguard/${VPN_CONF}.conf"; then
 		echo "[INFO] WireGuard is started."
 	else
 		echo "[ERROR] WireGuard failed to start."
