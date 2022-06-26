@@ -4,7 +4,6 @@
 umask "${UMASK}"
 
 if [[ ${VPN_ENABLED} == "true" ]]; then
-        wireguard-go wg0
 	if ip a show docker0 up > /dev/null 2>&1; then
 		echo "[ERROR] Docker network type \"host\" is not supported with VPN enabled. Exiting..."
 		exit 1
