@@ -1,4 +1,4 @@
-FROM cr.hotio.dev/hotio/base@sha256:4378603cfbdff1f02a33caee3e72e8e43d6236f4ac8461997f5ce142c59b3e4a
+FROM cr.hotio.dev/hotio/base@sha256:2d9fc1f1bab038667b32091957c25ad15301f73f9392c742c0ab273da68a18ed
 
 ENV VPN_ENABLED="false" VPN_LAN_NETWORK="" VPN_CONF="wg0" VPN_ADDITIONAL_PORTS="" WEBUI_PORTS="8080/tcp,8080/udp" PRIVOXY_ENABLED="false" S6_SERVICES_GRACETIME=180000 VPN_IP_CHECK_DELAY=5
 
@@ -11,7 +11,7 @@ RUN apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/ma
 
 ARG FULL_VERSION
 
-RUN curl -fsSL "https://github.com/userdocs/qbittorrent-nox-static/releases/download/release-4.3.9_v1.2.14/x86_64-icu-qbittorrent-nox" > "${APP_DIR}/qbittorrent-nox" && \
+RUN curl -fsSL "https://github.com/userdocs/qbittorrent-nox-static/releases/download/release-4.3.9_v1.2.17/x86_64-icu-qbittorrent-nox" > "${APP_DIR}/qbittorrent-nox" && \
     chmod 755 "${APP_DIR}/qbittorrent-nox"
 
 # Install wireguard-go as a fallback if wireguard is not supported by the host OS or Linux kernel
